@@ -35,10 +35,14 @@ export default function Hero() {
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
 
-            <button className="px-8 py-4 bg-white text-slate-900 rounded-xl font-medium hover:shadow-lg border border-slate-200 transition-all duration-300 flex items-center gap-2">
+            <a
+              href="/Satheesh_Kumar_Senior_FullStack_Engineer_Resume.pdf"
+              download="Satheesh_Kumar_Senior_FullStack_Engineer_Resume.pdf"
+              className="px-8 py-4 bg-white text-slate-900 rounded-xl font-medium hover:shadow-lg border border-slate-200 transition-all duration-300 flex items-center gap-2"
+            >
               <Download className="w-5 h-5" />
               Download Resume
-            </button>
+            </a>
           </div>
 
           <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto pt-12">

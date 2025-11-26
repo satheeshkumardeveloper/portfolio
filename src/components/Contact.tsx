@@ -4,25 +4,25 @@ const socialLinks = [
   {
     name: 'LinkedIn',
     icon: Linkedin,
-    href: 'https://linkedin.com',
+    href: 'https://www.linkedin.com/in/satheeshdeveloper/',
     color: 'from-blue-500 to-blue-600'
   },
   {
     name: 'GitHub',
     icon: Github,
-    href: 'https://github.com',
+    href: 'https://github.com/satheeshkumardeveloper',
     color: 'from-slate-700 to-slate-900'
   },
   {
     name: 'Email',
     icon: Mail,
-    href: 'mailto:contact@example.com',
+    href: 'mailto:satheshdeveloper@gmail.com',
     color: 'from-violet-500 to-violet-600'
   },
   {
     name: 'Resume',
     icon: FileText,
-    href: '#',
+    href: 'Satheesh_Kumar_Senior_FullStack_Engineer_Resume.pdf',
     color: 'from-emerald-500 to-emerald-600'
   }
 ];
@@ -127,7 +127,7 @@ export default function Contact() {
               </p>
               <div className="flex items-center gap-2 text-blue-100">
                 <Mail className="w-5 h-5" />
-                <span className="font-medium">contact@example.com</span>
+                <span className="font-medium">satheshdeveloper@gmail.com</span>
               </div>
             </div>
           </div>
@@ -136,7 +136,7 @@ export default function Contact() {
 
       <div className="text-center mt-16 pt-8 border-t border-slate-200">
         <p className="text-slate-600">
-          © 2025 Senior Full Stack Engineer. Built with React + TypeScript + Tailwind CSS
+          © 2025 Senior Full Stack Engineer
         </p>
       </div>
     </section>
