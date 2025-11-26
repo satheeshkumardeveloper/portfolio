@@ -1,0 +1,144 @@
+import { Mail, Linkedin, Github, FileText, Send } from 'lucide-react';
+
+const socialLinks = [
+  {
+    name: 'LinkedIn',
+    icon: Linkedin,
+    href: 'https://linkedin.com',
+    color: 'from-blue-500 to-blue-600'
+  },
+  {
+    name: 'GitHub',
+    icon: Github,
+    href: 'https://github.com',
+    color: 'from-slate-700 to-slate-900'
+  },
+  {
+    name: 'Email',
+    icon: Mail,
+    href: 'mailto:contact@example.com',
+    color: 'from-violet-500 to-violet-600'
+  },
+  {
+    name: 'Resume',
+    icon: FileText,
+    href: '#',
+    color: 'from-emerald-500 to-emerald-600'
+  }
+];
+
+export default function Contact() {
+  return (
+    <section id="contact" className="py-24 px-6 bg-gradient-to-br from-slate-50 via-white to-blue-50">
+      <div className="max-w-5xl mx-auto">
+        <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4 text-center">
+          Let's Connect
+        </h2>
+        <p className="text-slate-600 text-center mb-16 text-lg">
+          Available for freelance projects and full-time opportunities
+        </p>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm">
+            <h3 className="text-2xl font-bold text-slate-900 mb-6">
+              Send a Message
+            </h3>
+
+            <form className="space-y-4">
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                  placeholder="Your name"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                  placeholder="your@email.com"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  rows={5}
+                  className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
+                  placeholder="Tell me about your project..."
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="w-full px-8 py-4 bg-gradient-to-r from-blue-600 to-violet-600 text-white rounded-xl font-medium hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300 flex items-center justify-center gap-2 group"
+              >
+                <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                Send Message
+              </button>
+            </form>
+          </div>
+
+          <div className="space-y-6">
+            <div className="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm">
+              <h3 className="text-2xl font-bold text-slate-900 mb-6">
+                Connect With Me
+              </h3>
+
+              <div className="grid grid-cols-2 gap-4">
+                {socialLinks.map((link, index) => (
+                  <a
+                    key={index}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex flex-col items-center justify-center p-6 bg-slate-50 rounded-xl border border-slate-100 hover:shadow-lg hover:shadow-slate-200/50 transition-all duration-300 hover:-translate-y-1"
+                  >
+                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${link.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300`}>
+                      <link.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <span className="text-sm font-medium text-slate-700">
+                      {link.name}
+                    </span>
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-600 to-violet-600 rounded-2xl p-8 text-white shadow-lg">
+              <h3 className="text-2xl font-bold mb-3">
+                Open to Opportunities
+              </h3>
+              <p className="text-blue-100 leading-relaxed mb-4">
+                I'm currently available for freelance projects and full-time positions.
+                Let's discuss how I can help bring your ideas to life.
+              </p>
+              <div className="flex items-center gap-2 text-blue-100">
+                <Mail className="w-5 h-5" />
+                <span className="font-medium">contact@example.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="text-center mt-16 pt-8 border-t border-slate-200">
+        <p className="text-slate-600">
+          © 2025 Senior Full Stack Engineer. Built with React + TypeScript + Tailwind CSS
+        </p>
+      </div>
+    </section>
+  );
+}
