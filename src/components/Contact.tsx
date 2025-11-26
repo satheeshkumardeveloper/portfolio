@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { Mail, Linkedin, Github, FileText, Send } from 'lucide-react';
 
 const socialLinks = [
@@ -5,13 +6,13 @@ const socialLinks = [
     name: 'LinkedIn',
     icon: Linkedin,
     href: 'https://www.linkedin.com/in/satheeshdeveloper/',
-    color: 'from-blue-500 to-blue-600'
+    color: 'from-blue-500 to-blue-600',
   },
   {
     name: 'GitHub',
     icon: Github,
     href: 'https://github.com/satheeshkumardeveloper',
-    color: 'from-slate-700 to-slate-900'
+    color: 'from-slate-700 to-slate-900',
   },
   {
     name: 'Email',
@@ -28,6 +29,46 @@ const socialLinks = [
 ];
 
 export default function Contact() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState('');
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    setError('');
+    setSuccess(false);
+
+    try {
+      const response = await fetch('http://localhost:3001/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, email, message }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSuccess(true);
+        setName('');
+        setEmail('');
+        setMessage('');
+      } else {
+        setError(data.error || 'Failed to send message.');
+      }
+    } catch (err) {
+      console.error('Submission error:', err);
+      setError('An unexpected error occurred. Please try again later.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <section id="contact" className="py-24 px-6 bg-gradient-to-br from-slate-50 via-white to-blue-50">
       <div className="max-w-5xl mx-auto">
@@ -44,7 +85,7 @@ export default function Contact() {
               Send a Message
             </h3>
 
-            <form className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
                   Name
@@ -54,6 +95,9 @@ export default function Contact() {
                   id="name"
                   className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                   placeholder="Your name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
                 />
               </div>
 
@@ -66,6 +110,9 @@ export default function Contact() {
                   id="email"
                   className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                   placeholder="your@email.com"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
                 />
               </div>
 
@@ -78,16 +125,37 @@ export default function Contact() {
                   rows={5}
                   className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
                   placeholder="Tell me about your project..."
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  required
                 />
               </div>
 
               <button
                 type="submit"
                 className="w-full px-8 py-4 bg-gradient-to-r from-blue-600 to-violet-600 text-white rounded-xl font-medium hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300 flex items-center justify-center gap-2 group"
+                disabled={loading}
               >
-                <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                Send Message
+                {loading ? (
+                  'Sending...'
+                ) : (
+                  <>
+                    <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    Send Message
+                  </>
+                )}
               </button>
+
+              {success && (
+                <p className="text-green-600 text-center">
+                  Message sent successfully!
+                </p>
+              )}
+              {error && (
+                <p className="text-red-600 text-center">
+                  {error}
+                </p>
+              )}
             </form>
           </div>
 

@@ -1,8 +1,36 @@
 import { Download, Mail, ArrowRight } from 'lucide-react';
+import React, { useEffect, useRef } from 'react';
 
 export default function Hero() {
+  const vantaRef = useRef(null);
+
+  useEffect(() => {
+    let vantaEffect: any;
+    if (vantaRef.current) {
+      vantaEffect = (window as any).VANTA.NET({
+        el: vantaRef.current,
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: true,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0x0,
+        backgroundColor: 0xffffff,
+        points: 8.00,
+        maxPoints: 5.00,
+        maxDistance: 25.00,
+        spacing: 27.00
+      });
+    }
+    return () => {
+      if (vantaEffect) vantaEffect.destroy();
+    };
+  }, []);
+
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 py-20 relative overflow-hidden">
+    <section ref={vantaRef} className="min-h-screen flex items-center justify-center px-6 py-20 relative overflow-hidden" id="">
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-transparent to-violet-50/30 pointer-events-none" />
 
       <div className="max-w-6xl mx-auto w-full relative z-10">
