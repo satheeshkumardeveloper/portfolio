@@ -34,7 +34,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           <a href="#" className="flex items-center gap-2 group">
             <div className="w-10 h-10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <img src={ window.location.origin + '/logo.png' } alt="logo" className="w-10 h-10 rounded-xl" />
+              <img src={`${import.meta.env.VITE_BASE_URL}logo.png`} alt="logo" className="w-10 h-10 rounded-xl" />
             </div>
             <span className="font-bold text-slate-900 hidden sm:inline">Senior Dev</span>
           </a>
