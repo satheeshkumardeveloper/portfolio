@@ -19,6 +19,7 @@ app.post('/send-email', async (req, res) => {
   try {
     const transporter = nodemailer.createTransport({
       host: process.env.EMAIL_HOST,
+      service: 'gmail',
       port: process.env.EMAIL_PORT,
       secure: process.env.EMAIL_SECURE === 'true', // Use 'true' or 'false' in .env
       auth: {
@@ -26,9 +27,6 @@ app.post('/send-email', async (req, res) => {
         pass: process.env.EMAIL_PASS,
       },
     });
-
-    console.log('Transporter:', transporter);
-
 
     const mailOptions = {
       from: email, // Sender's email from the form

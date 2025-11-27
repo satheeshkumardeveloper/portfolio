@@ -64,7 +64,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="/Satheesh_Kumar_Senior_FullStack_Engineer_Resume.pdf"
+              href={ window.location.origin + '/Satheesh_Kumar_Senior_FullStack_Engineer_Resume.pdf' }
               download="Satheesh_Kumar_Senior_FullStack_Engineer_Resume.pdf"
               className="px-8 py-4 bg-white text-slate-900 rounded-xl font-medium hover:shadow-lg border border-slate-200 transition-all duration-300 flex items-center gap-2"
             >
