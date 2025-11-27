@@ -36,11 +36,49 @@ export default function Contact() {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState('');
 
+  // Validation states
+  const [nameValid, setNameValid] = useState(true);
+  const [emailValid, setEmailValid] = useState(true);
+  const [messageValid, setMessageValid] = useState(true);
+
+  const validateForm = () => {
+    let isValid = true;
+
+    if (name.trim() === '') {
+      setNameValid(false);
+      isValid = false;
+    } else {
+      setNameValid(true);
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setEmailValid(false);
+      isValid = false;
+    } else {
+      setEmailValid(true);
+    }
+
+    if (message.trim() === '') {
+      setMessageValid(false);
+      isValid = false;
+    } else {
+      setMessageValid(true);
+    }
+    return isValid;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setLoading(true);
     setError('');
     setSuccess(false);
+
+    if (!validateForm()) {
+      setError('Please fill in all required fields correctly.');
+      return;
+    }
+
+    setLoading(true);
 
     try {
       const response = await fetch('https://expense-api-node.netlify.app/.netlify/functions/api/sendmail/sendmail', {
@@ -93,12 +131,15 @@ export default function Contact() {
                 <input
                   type="text"
                   id="name"
-                  className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-slate-900 dark:text-white"
+                  className={`w-full px-4 py-3 bg-slate-50 dark:bg-slate-700 border ${nameValid ? 'border-slate-200 dark:border-slate-600' : 'border-red-500 !important'} rounded-xl focus:outline-none focus:ring-2 ${nameValid ? 'focus:ring-blue-500' : 'focus:ring-red-500 !important'} focus:border-transparent transition-all text-slate-900 dark:text-white`}
                   placeholder="Your name"
                   value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  required
+                  onChange={(e) => {
+                    setName(e.target.value);
+                    setNameValid(true); // Reset validation on change
+                  }}
                 />
+                 {!nameValid && <p className="text-red-500 text-sm mt-1">Name cannot be empty.</p>}
               </div>
 
               <div>
@@ -108,12 +149,15 @@ export default function Contact() {
                 <input
                   type="email"
                   id="email"
-                  className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-slate-900 dark:text-white"
+                  className={`w-full px-4 py-3 bg-slate-50 dark:bg-slate-700 border ${emailValid ? 'border-slate-200 dark:border-slate-600' : 'border-red-500 !important'} rounded-xl focus:outline-none focus:ring-2 ${emailValid ? 'focus:ring-blue-500' : 'focus:ring-red-500 !important'} focus:border-transparent transition-all text-slate-900 dark:text-white`}
                   placeholder="your@email.com"
                   value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                    setEmailValid(true); // Reset validation on change
+                  }}
                 />
+                {!emailValid && <p className="text-red-500 text-sm mt-1">Please enter a valid email address.</p>}
               </div>
 
               <div>
@@ -123,12 +167,15 @@ export default function Contact() {
                 <textarea
                   id="message"
                   rows={5}
-                  className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none text-slate-900 dark:text-white"
+                  className={`w-full px-4 py-3 bg-slate-50 dark:bg-slate-700 border ${messageValid ? 'border-slate-200 dark:border-slate-600' : 'border-red-500 !important'} rounded-xl focus:outline-none focus:ring-2 ${messageValid ? 'focus:ring-blue-500' : 'focus:ring-red-500 !important'} focus:border-transparent transition-all resize-none text-slate-900 dark:text-white`}
                   placeholder="Tell me about your project..."
                   value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  required
+                  onChange={(e) => {
+                    setMessage(e.target.value);
+                    setMessageValid(true); // Reset validation on change
+                  }}
                 />
+                {!messageValid && <p className="text-red-500 text-sm mt-1">Message cannot be empty.</p>}
               </div>
 
               <button
