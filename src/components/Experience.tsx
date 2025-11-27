@@ -3,8 +3,8 @@ import { Briefcase, Calendar } from 'lucide-react';
 const experiences = [
   {
     company: 'iBridge LLC',
-    role: 'Lead Full Stack Engineer',
-    duration: '2020 - Present',
+    role: 'Senior Soft Developer to Lead Software Engineer - Full Stack',
+    duration: '2022 - Present',
     achievements: [
       'Led development of enterprise ERP system handling 2M+ records with 80% performance improvement',
       'Architected distributed system using RabbitMQ and Redis for real-time data processing',
@@ -16,8 +16,8 @@ const experiences = [
   },
   {
     company: 'Zeoner Tech',
-    role: 'Senior Full Stack Developer',
-    duration: '2018 - 2020',
+    role: 'Senior Software Engineer',
+    duration: '2020 - 2022',
     achievements: [
       'Built AI-driven IPE platform serving 10K+ active users',
       'Implemented WebSocket-based real-time collaboration features',
@@ -28,9 +28,9 @@ const experiences = [
     color: 'from-violet-500 to-pink-600'
   },
   {
-    company: 'MEQUALS',
-    role: 'Full Stack Developer',
-    duration: '2017 - 2018',
+    company: 'MEQUALS Technologies',
+    role: 'Software Developer',
+    duration: '2018 - 2020',
     achievements: [
       'Developed COVID appointment system handling 5K+ concurrent users',
       'Implemented Redis caching strategy reducing database queries by 70%',
@@ -41,8 +41,8 @@ const experiences = [
   },
   {
     company: 'Weblogics',
-    role: 'Full Stack Developer',
-    duration: '2016 - 2017',
+    role: 'Junior Web Design & Developer',
+    duration: '2017 - 2018',
     achievements: [
       'Developed multiple client websites and web applications',
       'Implemented responsive designs and cross-browser compatibility',
@@ -55,12 +55,12 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-24 px-6 bg-gradient-to-br from-slate-50 to-white">
+    <section id="experience" className="py-24 px-6 bg-gradient-to-br from-slate-50 to-white dark:from-slate-900 dark:to-slate-800">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4 text-center">
+        <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4 text-center">
           Professional Journey
         </h2>
-        <p className="text-slate-600 text-center mb-16 text-lg">
+        <p className="text-slate-600 dark:text-slate-300 text-center mb-16 text-lg">
           Building impactful solutions across diverse industries
         </p>
 
@@ -68,7 +68,7 @@ export default function Experience() {
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className="group bg-white rounded-2xl p-8 border border-slate-100 hover:shadow-xl hover:shadow-slate-200/50 transition-all duration-300"
+              className="group bg-white dark:bg-slate-800 rounded-2xl p-8 border border-slate-100 dark:border-slate-700 hover:shadow-xl hover:shadow-slate-200/50 dark:hover:shadow-slate-700/50 transition-all duration-300"
             >
               <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
                 <div className="flex items-start gap-4 mb-4 md:mb-0">
@@ -76,7 +76,7 @@ export default function Experience() {
                     <Briefcase className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-slate-900 mb-1">
+                    <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-1">
                       {exp.role}
                     </h3>
                     <div className="text-lg font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-violet-600">
@@ -85,7 +85,7 @@ export default function Experience() {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-2 text-slate-600 bg-slate-50 px-4 py-2 rounded-lg border border-slate-100">
+                <div className="flex items-center gap-2 text-slate-600 dark:text-slate-300 bg-slate-50 dark:bg-slate-700 px-4 py-2 rounded-lg border border-slate-100 dark:border-slate-600">
                   <Calendar className="w-4 h-4" />
                   <span className="font-medium">{exp.duration}</span>
                 </div>
@@ -93,7 +93,7 @@ export default function Experience() {
 
               <ul className="space-y-3">
                 {exp.achievements.map((achievement, achIndex) => (
-                  <li key={achIndex} className="flex items-start gap-3 text-slate-700">
+                  <li key={achIndex} className="flex items-start gap-3 text-slate-700 dark:text-slate-300">
                     <div className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${exp.color} mt-2 flex-shrink-0`} />
                     <span className="leading-relaxed">{achievement}</span>
                   </li>

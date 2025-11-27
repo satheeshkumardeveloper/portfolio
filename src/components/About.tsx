@@ -1,13 +1,13 @@
 export default function About() {
   return (
-    <section id="about" className="py-24 px-6 bg-white">
+    <section id="about" className="py-24 px-6 bg-white dark:bg-slate-900">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-8 text-center">
+        <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-8 text-center">
           About Me
         </h2>
 
-        <div className="bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl p-8 md:p-12 border border-slate-100 shadow-sm">
-          <p className="text-lg md:text-xl text-slate-700 leading-relaxed space-y-4">
+        <div className="bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-800 dark:to-slate-700 rounded-2xl p-8 md:p-12 border border-slate-100 dark:border-slate-700 shadow-sm">
+          <p className="text-lg md:text-xl text-slate-700 dark:text-slate-300 leading-relaxed space-y-4">
             <span className="block">
               Senior Full Stack Engineer with 8+ years of experience building scalable, high-performance web applications.
               I specialize in architecting distributed systems and optimizing application performance at scale.

@@ -47,12 +47,12 @@ const achievements = [
 
 export default function Achievements() {
   return (
-    <section id="achievements" className="py-24 px-6 bg-white">
+    <section id="achievements" className="py-24 px-6 bg-white dark:bg-slate-900">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4 text-center">
+        <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4 text-center">
           Key Achievements
         </h2>
-        <p className="text-slate-600 text-center mb-16 text-lg">
+        <p className="text-slate-600 dark:text-slate-300 text-center mb-16 text-lg">
           Measurable results that drive business success
         </p>
 
@@ -60,21 +60,21 @@ export default function Achievements() {
           {achievements.map((achievement, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden bg-gradient-to-br from-slate-50 to-white rounded-2xl p-8 border border-slate-100 hover:shadow-xl hover:shadow-slate-200/50 transition-all duration-300 hover:-translate-y-1"
+              className="group relative overflow-hidden bg-gradient-to-br from-slate-50 to-white dark:from-slate-800 dark:to-slate-700 rounded-2xl p-8 border border-slate-100 dark:border-slate-700 hover:shadow-xl hover:shadow-slate-200/50 dark:hover:shadow-slate-700/50 transition-all duration-300 hover:-translate-y-1"
             >
               <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${achievement.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                 <achievement.icon className="w-7 h-7 text-white" />
               </div>
 
-              <div className="text-4xl font-bold text-slate-900 mb-2">
+              <div className="text-4xl font-bold text-slate-900 dark:text-white mb-2">
                 {achievement.value}
               </div>
 
-              <h3 className="text-lg font-semibold text-slate-900 mb-1">
+              <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-1">
                 {achievement.title}
               </h3>
 
-              <p className="text-slate-600">
+              <p className="text-slate-600 dark:text-slate-300">
                 {achievement.description}
               </p>
 

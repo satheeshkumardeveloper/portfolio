@@ -70,30 +70,30 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 px-6 bg-gradient-to-br from-slate-50 via-white to-blue-50">
+    <section id="contact" className="py-24 px-6 bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-slate-900 dark:via-slate-950 dark:to-slate-800">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4 text-center">
+        <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4 text-center">
           Let's Connect
         </h2>
-        <p className="text-slate-600 text-center mb-16 text-lg">
+        <p className="text-slate-600 dark:text-slate-300 text-center mb-16 text-lg">
           Available for freelance projects and full-time opportunities
         </p>
 
         <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm">
-            <h3 className="text-2xl font-bold text-slate-900 mb-6">
+          <div className="bg-white dark:bg-slate-800 rounded-2xl p-8 border border-slate-100 dark:border-slate-700 shadow-sm">
+            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">
               Send a Message
             </h3>
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
+                <label htmlFor="name" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
                   Name
                 </label>
                 <input
                   type="text"
                   id="name"
-                  className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-slate-900 dark:text-white"
                   placeholder="Your name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
@@ -102,13 +102,13 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
                   Email
                 </label>
                 <input
                   type="email"
                   id="email"
-                  className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-slate-900 dark:text-white"
                   placeholder="your@email.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -117,13 +117,13 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
                   Message
                 </label>
                 <textarea
                   id="message"
                   rows={5}
-                  className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
+                  className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none text-slate-900 dark:text-white"
                   placeholder="Tell me about your project..."
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
@@ -160,8 +160,8 @@ export default function Contact() {
           </div>
 
           <div className="space-y-6">
-            <div className="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm">
-              <h3 className="text-2xl font-bold text-slate-900 mb-6">
+            <div className="bg-white dark:bg-slate-800 rounded-2xl p-8 border border-slate-100 dark:border-slate-700 shadow-sm">
+              <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">
                 Connect With Me
               </h3>
 
@@ -172,12 +172,12 @@ export default function Contact() {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex flex-col items-center justify-center p-6 bg-slate-50 rounded-xl border border-slate-100 hover:shadow-lg hover:shadow-slate-200/50 transition-all duration-300 hover:-translate-y-1"
+                    className="group flex flex-col items-center justify-center p-6 bg-slate-50 dark:bg-slate-700 rounded-xl border border-slate-100 dark:border-slate-600 hover:shadow-lg hover:shadow-slate-200/50 dark:hover:shadow-slate-700/50 transition-all duration-300 hover:-translate-y-1"
                   >
                     <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${link.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300`}>
                       <link.icon className="w-6 h-6 text-white" />
                     </div>
-                    <span className="text-sm font-medium text-slate-700">
+                    <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
                       {link.name}
                     </span>
                   </a>
@@ -202,8 +202,8 @@ export default function Contact() {
         </div>
       </div>
 
-      <div className="text-center mt-16 pt-8 border-t border-slate-200">
-        <p className="text-slate-600">
+      <div className="text-center mt-16 pt-8 border-t border-slate-200 dark:border-slate-700">
+        <p className="text-slate-600 dark:text-slate-300">
           © 2025 Senior Full Stack Engineer
         </p>
       </div>
