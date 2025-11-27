@@ -131,6 +131,8 @@ export default function Contact() {
                 <input
                   type="text"
                   id="name"
+                  aria-invalid={!nameValid}
+                  aria-describedby={!nameValid ? 'name-error' : undefined}
                   className={`w-full px-4 py-3 bg-slate-50 dark:bg-slate-700 border ${nameValid ? 'border-slate-200 dark:border-slate-600' : 'border-red-500 !important'} rounded-xl focus:outline-none focus:ring-2 ${nameValid ? 'focus:ring-blue-500' : 'focus:ring-red-500 !important'} focus:border-transparent transition-all text-slate-900 dark:text-white`}
                   placeholder="Your name"
                   value={name}
@@ -139,7 +141,7 @@ export default function Contact() {
                     setNameValid(true); // Reset validation on change
                   }}
                 />
-                 {!nameValid && <p className="text-red-500 text-sm mt-1">Name cannot be empty.</p>}
+                 {!nameValid && <p id="name-error" className="text-red-500 text-sm mt-1">Name cannot be empty.</p>}
               </div>
 
               <div>
@@ -149,6 +151,8 @@ export default function Contact() {
                 <input
                   type="email"
                   id="email"
+                  aria-invalid={!emailValid}
+                  aria-describedby={!emailValid ? 'email-error' : undefined}
                   className={`w-full px-4 py-3 bg-slate-50 dark:bg-slate-700 border ${emailValid ? 'border-slate-200 dark:border-slate-600' : 'border-red-500 !important'} rounded-xl focus:outline-none focus:ring-2 ${emailValid ? 'focus:ring-blue-500' : 'focus:ring-red-500 !important'} focus:border-transparent transition-all text-slate-900 dark:text-white`}
                   placeholder="your@email.com"
                   value={email}
@@ -157,7 +161,7 @@ export default function Contact() {
                     setEmailValid(true); // Reset validation on change
                   }}
                 />
-                {!emailValid && <p className="text-red-500 text-sm mt-1">Please enter a valid email address.</p>}
+                {!emailValid && <p id="email-error" className="text-red-500 text-sm mt-1">Please enter a valid email address.</p>}
               </div>
 
               <div>
@@ -167,6 +171,8 @@ export default function Contact() {
                 <textarea
                   id="message"
                   rows={5}
+                  aria-invalid={!messageValid}
+                  aria-describedby={!messageValid ? 'message-error' : undefined}
                   className={`w-full px-4 py-3 bg-slate-50 dark:bg-slate-700 border ${messageValid ? 'border-slate-200 dark:border-slate-600' : 'border-red-500 !important'} rounded-xl focus:outline-none focus:ring-2 ${messageValid ? 'focus:ring-blue-500' : 'focus:ring-red-500 !important'} focus:border-transparent transition-all resize-none text-slate-900 dark:text-white`}
                   placeholder="Tell me about your project..."
                   value={message}
@@ -175,7 +181,7 @@ export default function Contact() {
                     setMessageValid(true); // Reset validation on change
                   }}
                 />
-                {!messageValid && <p className="text-red-500 text-sm mt-1">Message cannot be empty.</p>}
+                {!messageValid && <p id="message-error" className="text-red-500 text-sm mt-1">Message cannot be empty.</p>}
               </div>
 
               <button
@@ -219,6 +225,11 @@ export default function Contact() {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={
+                      link.name === 'Resume'
+                        ? `Download Satheesh Kumar's Resume (PDF)`
+                        : `Visit Satheesh Kumar's ${link.name} profile`
+                    }
                     className="group flex flex-col items-center justify-center p-6 bg-slate-50 dark:bg-slate-700 rounded-xl border border-slate-100 dark:border-slate-600 hover:shadow-lg hover:shadow-slate-200/50 dark:hover:shadow-slate-700/50 transition-all duration-300 hover:-translate-y-1"
                   >
                     <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${link.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300`}>

@@ -81,10 +81,10 @@ export default function Projects() {
               className="group bg-gradient-to-br from-slate-50 to-white dark:from-slate-800 dark:to-slate-700 rounded-2xl p-8 border border-slate-100 dark:border-slate-700 hover:shadow-2xl hover:shadow-slate-200/50 dark:hover:shadow-slate-700/50 transition-all duration-300 hover:-translate-y-1"
             >
               <div className="flex items-start justify-between mb-4">
-<h3 className="text-2xl font-bold text-slate-900 dark:text-white group-hover:text-blue-700 dark:group-hover:text-blue-400 transition-colors">
-  {project.title}
-</h3>
-                <ExternalLink className="w-5 h-5 text-slate-400 dark:text-slate-500 group-hover:text-blue-700 dark:group-hover:text-blue-400 transition-colors" />
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-white group-hover:text-blue-700 dark:group-hover:text-blue-400 transition-colors">
+                  {project.title} 
+                </h3>
+                {/* <ExternalLink className="w-5 h-5 text-slate-400 dark:text-slate-500 group-hover:text-blue-700 dark:group-hover:text-blue-400 transition-colors" /> */}
               </div>
 
               <p className="text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">

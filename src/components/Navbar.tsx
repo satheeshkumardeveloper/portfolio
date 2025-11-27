@@ -31,12 +31,12 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200/50 dark:border-slate-700/50 text-slate-900 dark:text-white">
+    <nav aria-label="Main navigation" className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200/50 dark:border-slate-700/50 text-slate-900 dark:text-white">
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <a href="#" className="flex items-center gap-2 group">
             <div className="w-10 h-10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <img src={`${import.meta.env.VITE_BASE_URL}logo.png`} alt="logo" className="w-10 h-10 rounded-xl" />
+              <img src={`${import.meta.env.VITE_BASE_URL}logo.png`} alt="logo" width="40" height="40" className="w-10 h-10 rounded-xl" />
             </div>
             <span className="font-bold text-slate-900 dark:text-white hidden sm:inline">Senior Dev</span>
           </a>
@@ -67,13 +67,13 @@ export default function Navbar() {
                 <Sun className="w-6 h-6" />
               )}
             </button>
-            <a
+            {/* <a
               href="#contact"
               onClick={handleNavClick}
               className="px-6 py-2 bg-gradient-to-r from-blue-600 to-violet-600 text-white rounded-lg font-medium hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300 transform hover:scale-105"
             >
               Get in Touch
-            </a>
+            </a> */}
           </div>
 
           <button
@@ -90,10 +90,11 @@ export default function Navbar() {
         </div>
 
         {isOpen && (
-          <div className="md:hidden mt-4 pb-4 space-y-3 border-t border-slate-200 dark:border-slate-700 pt-4 animate-fade-in bg-white dark:bg-slate-900">
+          <div role="menu" aria-label="Mobile navigation" className="md:hidden mt-4 pb-4 space-y-3 border-t border-slate-200 dark:border-slate-700 pt-4 animate-fade-in bg-white dark:bg-slate-900">
             {navLinks.map((link, index) => (
               <a
                 key={index}
+                role="menuitem"
                 href={link.href}
                 onClick={handleNavClick}
                 className="block px-4 py-3 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-slate-700 rounded-lg transition-all duration-300 font-medium transform hover:translate-x-1"
@@ -102,6 +103,7 @@ export default function Navbar() {
               </a>
             ))}
             <button
+              role="menuitem"
               onClick={toggleTheme}
               className="w-full px-4 py-3 flex items-center justify-center gap-2 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-slate-700 rounded-lg transition-all duration-300 font-medium"
               aria-label="Toggle dark mode"
@@ -119,6 +121,7 @@ export default function Navbar() {
               )}
             </button>
             <a
+              role="menuitem"
               href="#contact"
               onClick={handleNavClick}
               className="block px-4 py-3 bg-gradient-to-r from-blue-600 to-violet-600 text-white rounded-lg text-center font-medium hover:shadow-lg transition-all duration-300 transform hover:scale-105"

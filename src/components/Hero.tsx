@@ -59,6 +59,7 @@ export default function Hero() {
           <div className="flex flex-wrap gap-4 justify-center pt-4">
             <a
               href="#contact"
+              aria-label="Contact Me"
               className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-violet-600 text-white rounded-xl font-medium hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300 flex items-center gap-2"
             >
               <Mail className="w-5 h-5" />
@@ -69,6 +70,7 @@ export default function Hero() {
             <a
               href= {`${import.meta.env.VITE_BASE_URL}Satheesh_Kumar_Senior_FullStack_Engineer_Resume.pdf`}
               download="Satheesh_Kumar_Senior_FullStack_Engineer_Resume.pdf"
+              aria-label="Download Satheesh Kumar's Resume"
               className="px-8 py-4 bg-white text-slate-900 rounded-xl font-medium hover:shadow-lg border border-slate-200 transition-all duration-300 flex items-center gap-2 dark:bg-slate-700 dark:text-white dark:border-slate-600 dark:hover:shadow-slate-600/30"
             >
               <Download className="w-5 h-5" />
