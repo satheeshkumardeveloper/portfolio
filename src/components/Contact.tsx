@@ -43,7 +43,7 @@ export default function Contact() {
     setSuccess(false);
 
     try {
-      const response = await fetch('http://localhost:3001/send-email', {
+      const response = await fetch('https://expense-api-node.netlify.app/.netlify/functions/api/sendmail/sendmail', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
