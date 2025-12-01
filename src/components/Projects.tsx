@@ -9,6 +9,7 @@ const projects = [
       { label: 'Records Handled', value: '2M+', icon: Package }
     ],
     technologies: ['Laravel', 'React', 'PostgreSQL', 'Redis', 'RabbitMQ'],
+    secondaryTech: 'Laravel',
     gradient: 'from-blue-500 to-violet-600'
   },
   {
@@ -19,6 +20,7 @@ const projects = [
       { label: 'Active Users', value: '10K+', icon: Users }
     ],
     technologies: ['Laravel', 'RabbitMQ', 'WebSockets', 'Azure', 'Vue.js', 'MySQL'],
+    secondaryTech: 'FrontEnd (AI Dashboard + RabbitMQ)',
     gradient: 'from-violet-500 to-pink-600'
   },
   {
@@ -29,6 +31,7 @@ const projects = [
       { label: 'Uptime', value: '99.9%', icon: TrendingUp }
     ],
     technologies: ['Laravel', 'React', 'PostgreSQL', 'Redis', 'Docker'],
+    secondaryTech: 'Laravel',
     gradient: 'from-emerald-500 to-blue-600'
   },
   {
@@ -39,6 +42,7 @@ const projects = [
       { label: 'Load Time', value: '2s', icon: Zap }
     ],
     technologies: ['Laravel', 'React', 'MongoDB', 'Redis'],
+    secondaryTech: 'Laravel',
     gradient: 'from-orange-500 to-pink-600'
   },
   {
@@ -49,6 +53,7 @@ const projects = [
       { label: 'Error Reduction', value: '40%', icon: Zap }
     ],
     technologies: ['CodeIgniter', 'MySQL', 'jQuery', 'Bootstrap'],
+    secondaryTech: 'CodeIgniter',
     gradient: 'from-sky-500 to-indigo-600'
   },
   {
@@ -59,7 +64,58 @@ const projects = [
       { label: 'Processing Time', value: '-20%', icon: Zap }
     ],
     technologies: ['CodeIgniter', 'MySQL', 'jQuery', 'Bootstrap'],
+    secondaryTech: 'CodeIgniter',
     gradient: 'from-rose-500 to-red-600'
+  },
+  {
+    title: 'Metolius',
+    description: 'Modern web application built with React.',
+    metrics: [
+      { label: 'Performance', value: 'High', icon: TrendingUp }
+    ],
+    technologies: ['React'],
+    secondaryTech: 'React',
+    gradient: 'from-purple-500 to-indigo-600'
+  },
+  {
+    title: 'HealthCare',
+    description: 'Healthcare application developed with React and TypeScript.',
+    metrics: [
+      { label: 'Reliability', value: 'Excellent', icon: Users }
+    ],
+    technologies: ['React', 'TypeScript'],
+    secondaryTech: 'React + TypeScript',
+    gradient: 'from-green-500 to-teal-600'
+  },
+  {
+    title: 'CallProof',
+    description: 'REST API with robust authentication using JWT and OAuth2.',
+    metrics: [
+      { label: 'Security', value: 'Strong', icon: Zap }
+    ],
+    technologies: ['REST API', 'JWT', 'OAuth2'],
+    secondaryTech: 'REST API (JWT + OAuth2)',
+    gradient: 'from-yellow-500 to-orange-600'
+  },
+  {
+    title: 'MidLife Health Advice',
+    description: 'Website offering health advice, built with CodeIgniter.',
+    metrics: [
+      { label: 'Accessibility', value: 'Good', icon: Users }
+    ],
+    technologies: ['CodeIgniter'],
+    secondaryTech: 'CodeIgniter',
+    gradient: 'from-amber-500 to-red-500'
+  },
+  {
+    title: 'HealthyDrink',
+    description: 'E-commerce platform for healthy drinks, powered by WordPress, WooCommerce, and Stripe.',
+    metrics: [
+      { label: 'Sales', value: 'High', icon: TrendingUp }
+    ],
+    technologies: ['WordPress', 'WooCommerce', 'Stripe'],
+    secondaryTech: 'WordPress + WooCommerce + Stripe',
+    gradient: 'from-cyan-500 to-blue-500'
   }
 ];
 
@@ -82,7 +138,7 @@ export default function Projects() {
             >
               <div className="flex items-start justify-between mb-4">
                 <h3 className="text-2xl font-bold text-slate-900 dark:text-white group-hover:text-blue-700 dark:group-hover:text-blue-400 transition-colors">
-                  {project.title} 
+                  {project.title} <span className="text-base text-slate-500 dark:text-slate-400">({project.secondaryTech})</span>
                 </h3>
                 {/* <ExternalLink className="w-5 h-5 text-slate-400 dark:text-slate-500 group-hover:text-blue-700 dark:group-hover:text-blue-400 transition-colors" /> */}
               </div>

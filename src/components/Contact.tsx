@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motivationalQuotes } from '../utils/quotes';
-import { Mail, Linkedin, Github, FileText, Send } from 'lucide-react';
+import { Mail, Linkedin, Github, FileText, Send, Code, Briefcase, Users, Trophy } from 'lucide-react'; // Added icons for stats counter
 
 const socialLinks = [
   {
@@ -28,6 +28,80 @@ const socialLinks = [
     color: 'from-emerald-500 to-emerald-600'
   }
 ];
+
+interface AnimatedCounterProps {
+  end: number | string;
+  duration?: number;
+  suffix?: string;
+  prefix?: string;
+  icon: React.ElementType;
+  label: string;
+  gradient: string;
+}
+
+// Reusable animated counter component
+const AnimatedCounter = ({ end, duration = 2000, suffix = '', prefix = '', icon: Icon, label, gradient }: AnimatedCounterProps) => {
+  const [count, setCount] = useState(0);
+  const [inView, setInView] = useState(false);
+  const ref = React.useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+        } else {
+          setInView(false);
+          setCount(0); // Reset count when out of view
+        }
+      },
+      { threshold: 0.5 } // Trigger when 50% of the component is in view
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!inView) return;
+
+    let start = 0;
+    const endValue = typeof end === 'string' ? parseInt(end.replace(/\D/g, '')) : end; // Extract numeric part for counting
+
+    if (isNaN(endValue as number)) { // Cast to number for isNaN check
+      setCount(0); // If not a valid number, start from 0 and display the string directly later
+      return;
+    }
+
+    const incrementTime = (duration / endValue);
+
+    const timer = setInterval(() => {
+      start += 1;
+      setCount(start);
+      if (start === endValue) {
+        clearInterval(timer);
+      }
+    }, incrementTime);
+
+    return () => clearInterval(timer);
+  }, [end, duration, inView]);
+
+  return (
+    <div ref={ref} className={`flex flex-col items-center justify-center p-4 rounded-xl text-white shadow-lg ${gradient}`}>
+      <Icon className="w-8 h-8 mb-2" />
+      <div className="text-3xl font-bold">{prefix}{count}{suffix}</div>
+      <div className="text-sm opacity-80 mt-1">{label}</div>
+    </div>
+  );
+};
+
 
 export default function Contact() {
   const [name, setName] = useState('');
@@ -268,10 +342,44 @@ export default function Contact() {
       </div>
 
       <div className="text-center mt-16 pt-8 border-t border-slate-200 dark:border-slate-700">
+        {/* Portfolio Stats Counters */}
+        <div className="mb-8 grid grid-cols-2 md:grid-cols-4 gap-6">
+          <AnimatedCounter
+            end={11}
+            label="Projects Completed"
+            icon={Code}
+            gradient="from-blue-600 to-indigo-700"
+          />
+          <AnimatedCounter
+            end={5}
+            suffix="+"
+            label="Years Experience"
+            icon={Briefcase}
+            gradient="from-green-600 to-teal-700"
+          />
+          <AnimatedCounter
+            end={15}
+            suffix="+"
+            label="Technologies Mastered"
+            icon={Trophy}
+            gradient="from-purple-600 to-pink-700"
+          />
+          <AnimatedCounter
+            end={50}
+            suffix="+"
+            label="Clients Served"
+            icon={Users}
+            gradient="from-orange-600 to-red-700"
+          />
+        </div>
+
         <p className="text-slate-600 dark:text-slate-300">
-        <a href="https://sathesh-resume.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700 transition-all duration-300 hover:scale-105 inline-block">Sathesh-Resume</a>  © 2025 Senior Full Stack Engineer
+        <a href="https://sathesh-resume.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700 transition-all duration-300 hover:scale-105 inline-block">Sathesh-Resume</a>  © {new Date().getFullYear()} Senior Full Stack Engineer
         </p>
         <p className="text-slate-500 dark:text-slate-400 text-sm mt-2">{randomQuote}</p>
+        <div className="mt-8 flex justify-center">
+          <img src={`${import.meta.env.VITE_BASE_URL}Sathesh_Develope_logo.png`} alt="Portfolio Logo" className="w-24 h-24 object-contain" />
+        </div>
       </div>
     </section>
   );
