@@ -10,6 +10,42 @@
   }
 }
 
+/* Custom Scrollbar for Chat Window */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-track {
+  background: #334155; /* slate-700 */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #64748b; /* slate-600 */
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #475569; /* slate-500 */
+}
+
+.bottom-space{
+  bottom: 6rem ;
+}
+
+
 @layer utilities {
   .animate-fade-in {
     animation: fadeIn 0.8s ease-out;

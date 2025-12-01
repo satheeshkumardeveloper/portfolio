@@ -9,6 +9,7 @@ import Achievements from './components/Achievements';
 import Contact from './components/Contact';
 import { ThemeProvider } from './context/ThemeContext'; // Import ThemeProvider
 import { ArrowUp } from 'lucide-react'; // Import icon for the button
+import ChatWidget from './components/Chat/ChatWidget';
 
 function App() {
   const [showButton, setShowButton] = useState(false);
@@ -51,12 +52,13 @@ function App() {
         {showButton && (
           <button
             onClick={scrollToTop}
-            className="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300 z-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+            className="fixed bottom-8 right-10 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300 z-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
             aria-label="Back to top"
           >
             <ArrowUp className="w-6 h-6" />
           </button>
         )}
+        <ChatWidget /> {/* Add the chat widget here */}
       </div>
     </ThemeProvider>
   );

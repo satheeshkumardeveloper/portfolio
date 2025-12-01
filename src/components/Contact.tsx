@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { motivationalQuotes } from '../utils/quotes';
 import { Mail, Linkedin, Github, FileText, Send } from 'lucide-react';
 
 const socialLinks = [
@@ -35,6 +36,12 @@ export default function Contact() {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState('');
+  const [randomQuote, setRandomQuote] = useState('');
+
+  useEffect(() => {
+    const randomIndex = Math.floor(Math.random() * motivationalQuotes.length);
+    setRandomQuote(motivationalQuotes[randomIndex]);
+  }, []);
 
   // Validation states
   const [nameValid, setNameValid] = useState(true);
@@ -262,8 +269,9 @@ export default function Contact() {
 
       <div className="text-center mt-16 pt-8 border-t border-slate-200 dark:border-slate-700">
         <p className="text-slate-600 dark:text-slate-300">
-          © 2025 Senior Full Stack Engineer
+        <a href="https://sathesh-resume.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700 transition-all duration-300 hover:scale-105 inline-block">Sathesh-Resume</a>  © 2025 Senior Full Stack Engineer
         </p>
+        <p className="text-slate-500 dark:text-slate-400 text-sm mt-2">{randomQuote}</p>
       </div>
     </section>
   );
