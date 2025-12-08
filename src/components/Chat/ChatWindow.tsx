@@ -29,7 +29,7 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ onClose }) => {
   const fetchSuggestions = async () => {
     try {
       setSuggestionsLoading(true);
-      const response = await fetch('http://localhost:8888/.netlify/functions/api/chatbot/question');
+      const response = await fetch('https://expense-api-node.netlify.app/.netlify/functions/api/chatbot/question');
       
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -93,7 +93,7 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ onClose }) => {
 
       try {
         // Make API call to Netlify function
-        const response = await fetch(`http://localhost:8888/.netlify/functions/api/chatbot?question=${encodeURIComponent(inputValue)}`);
+        const response = await fetch(`https://expense-api-node.netlify.app/.netlify/functions/api/chatbot?question=${encodeURIComponent(inputValue)}`);
         
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
@@ -138,7 +138,7 @@ const ChatWindow: React.FC<ChatWindowProps> = ({ onClose }) => {
 
     try {
       // Make API call to Netlify function
-      const response = await fetch(`http://localhost:8888/.netlify/functions/api/chatbot?question=${encodeURIComponent(suggestion)}`);
+      const response = await fetch(`https://expense-api-node.netlify.app/.netlify/functions/api/chatbot?question=${encodeURIComponent(suggestion)}`);
       
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
