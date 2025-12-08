@@ -1,0 +1,716 @@
+[
+  {
+    "question": "What is your total experience as a full-stack engineer?",
+    "answer": "I have 8+ years of experience in full-stack development using Laravel, React, Vue, Redis, RabbitMQ, MySQL, and PostgreSQL."
+  },
+  {
+    "question": "What are your primary tech stacks?",
+    "answer": "Laravel, React, Vue, Redis, RabbitMQ, MySQL, PostgreSQL."
+  },
+  {
+    "question": "What roles have you handled?",
+    "answer": "Senior Software Developer, Lead Software Engineer - Full Stack."
+  },
+  {
+    "question": "Which industries have you worked in?",
+    "answer": "School ERP, healthcare/lab systems, warehouse management, and web applications."
+  },
+  {
+    "question": "Where are you currently based?",
+    "answer": "Bengaluru, India."
+  },
+  {
+    "question": "Are you experienced in distributed systems?",
+    "answer": "Yes, I have built distributed queue systems using RabbitMQ and async workers."
+  },
+  {
+    "question": "Do you have experience with cloud-ready architecture?",
+    "answer": "Yes, I have implemented cloud-friendly designs with container streaming and async processing."
+  },
+  {
+    "question": "Do you have team leadership experience?",
+    "answer": "Yes, I have led teams, mentored developers, and managed engineering workflows."
+  },
+  {
+    "question": "What are your main strengths?",
+    "answer": "System design, API optimization, SQL tuning, distributed queues, and clean architecture."
+  },
+  {
+    "question": "How much API optimization experience do you have?",
+    "answer": "I have improved API performance by up to 80% through indexing, caching, and queueing."
+  },
+
+  {
+    "question": "What was your role in the Avera School ERP system?",
+    "answer": "I led end-to-end development and integrated 5+ schools into the platform."
+  },
+  {
+    "question": "How did you improve ERP performance?",
+    "answer": "By optimizing handling of high-volume student, fee, and academic data."
+  },
+  {
+    "question": "What notification systems did you build for ERP?",
+    "answer": "WhatsApp, SMS, and Email workflow notifications."
+  },
+  {
+    "question": "How much did parent communication improve?",
+    "answer": "By 60% due to automated billing and event notifications."
+  },
+  {
+    "question": "How many payment gateways did you integrate?",
+    "answer": "Two payment gateways with account-wise routing."
+  },
+  {
+    "question": "How much was reconciliation time reduced?",
+    "answer": "It was reduced by 40%."
+  },
+  {
+    "question": "How did you optimize large dataset performance?",
+    "answer": "By reducing load time by 35% using optimized architecture."
+  },
+  {
+    "question": "Did you optimize report generation?",
+    "answer": "Yes, Excel and PDF report generation became 2× faster."
+  },
+  {
+    "question": "What backend improvements did you add?",
+    "answer": "Cloud security middleware, workflow engines, and queue-based processing."
+  },
+  {
+    "question": "How much did sprint planning improve delivery?",
+    "answer": "Delivery predictability increased by 30%."
+  },
+  {
+    "question": "How did you improve the fee module?",
+    "answer": "By structuring account-wise routing and automated receipts."
+  },
+  {
+    "question": "Did you use Redis for ERP performance?",
+    "answer": "Yes, Redis was used for caching and queueing."
+  },
+  {
+    "question": "What security improvements were made?",
+    "answer": "Middleware sanitization and secure API structures."
+  },
+  {
+    "question": "Did you design the academic module?",
+    "answer": "Yes, including academics, billing, workflows, and auth."
+  },
+
+  {
+    "question": "What is the Metolius project?",
+    "answer": "A scalable React frontend for handling large datasets."
+  },
+  {
+    "question": "How much load time did you reduce?",
+    "answer": "Load time was reduced by 35%."
+  },
+  {
+    "question": "What security measures were added to Metolius?",
+    "answer": "Middleware sanitization for incoming requests."
+  },
+  {
+    "question": "Did you use lazy loading?",
+    "answer": "Yes, to improve performance for heavy data modules."
+  },
+  {
+    "question": "Did you build reusable components?",
+    "answer": "Yes, reusable and scalable UI components."
+  },
+  {
+    "question": "What state management strategy did you use?",
+    "answer": "A middleware-driven controlled data flow."
+  },
+  {
+    "question": "Did you work on API integration?",
+    "answer": "Yes, including secure cloud API integration."
+  },
+
+  {
+    "question": "What is the IPE project?",
+    "answer": "A Laravel + RabbitMQ async processing system with WebSockets."
+  },
+  {
+    "question": "What was the main goal of the IPE project?",
+    "answer": "To enable live AI progress tracking."
+  },
+  {
+    "question": "How much client wait time was reduced?",
+    "answer": "Client wait time was reduced by 40%."
+  },
+  {
+    "question": "Why was RabbitMQ used?",
+    "answer": "For distributed queues and high-throughput processing."
+  },
+  {
+    "question": "Why were WebSockets used?",
+    "answer": "To send real-time updates without page reloads."
+  },
+  {
+    "question": "What async features were implemented?",
+    "answer": "Workers, delayed jobs, job batches, and live updates."
+  },
+  {
+    "question": "How was Azure integrated?",
+    "answer": "Through continuous AI data streaming."
+  },
+  {
+    "question": "How did you ensure scalability?",
+    "answer": "Using message queues and containerized processing."
+  },
+
+  {
+    "question": "What is the Tracker system?",
+    "answer": "A lab system for plate-based matrix and grid calculations."
+  },
+  {
+    "question": "How much did sample processing efficiency improve?",
+    "answer": "It improved by 35%."
+  },
+  {
+    "question": "What modules did you build for the lab workflow?",
+    "answer": "Sample collection, result entry, analytics dashboards, and visual reports."
+  },
+  {
+    "question": "How much was manual reporting time reduced?",
+    "answer": "By 50%."
+  },
+  {
+    "question": "Did you build a mobile app?",
+    "answer": "Yes, using REST APIs for doctors and technicians."
+  },
+  {
+    "question": "How much did communication improve?",
+    "answer": "Turnaround time improved by 40%."
+  },
+  {
+    "question": "What automations did you build?",
+    "answer": "Cron-based lab alert notifications."
+  },
+  {
+    "question": "How much were missed workflows reduced?",
+    "answer": "By 90%."
+  },
+  {
+    "question": "What is the FirstCovid19Test system?",
+    "answer": "A system for doctor/patient appointment booking with PayPal integration."
+  },
+  {
+    "question": "How much faster did Covid appointment processing become?",
+    "answer": "It became 60% faster."
+  },
+
+  {
+    "question": "What is Medical Probook?",
+    "answer": "A CodeIgniter-based system for transactions, billing, sales, and reports."
+  },
+  {
+    "question": "How much operational efficiency improved?",
+    "answer": "By 30%."
+  },
+  {
+    "question": "How much were billing errors reduced?",
+    "answer": "By 40% due to transaction-safe workflows."
+  },
+  {
+    "question": "How much faster were reports generated?",
+    "answer": "Reports became 50% faster."
+  },
+  {
+    "question": "What is Theia Warehouse?",
+    "answer": "A warehouse system for package management, stock, and transactions."
+  },
+  {
+    "question": "How much did stock accuracy improve?",
+    "answer": "By 25%."
+  },
+  {
+    "question": "How much processing time improved?",
+    "answer": "By 20%."
+  },
+
+  {
+    "question": "What performance improvements were made at Weblogics?",
+    "answer": "Website load speeds improved by 25–40%."
+  },
+  {
+    "question": "How much did SEO visibility improve?",
+    "answer": "By 15–20%."
+  },
+  {
+    "question": "Did you build responsive websites?",
+    "answer": "Yes, for multiple industries and portfolios."
+  },
+  {
+    "question": "Did you work with WordPress?",
+    "answer": "Yes, including custom blogs and form builders."
+  },
+  {
+    "question": "How much faster were content updates?",
+    "answer": "30% faster."
+  },
+
+  {
+    "question": "What was your biggest API optimization achievement?",
+    "answer": "Reducing response time from 3.1 seconds to 620 ms."
+  },
+  {
+    "question": "How did you achieve this API improvement?",
+    "answer": "By moving heavy logic to queues, adding indexes, and caching."
+  },
+  {
+    "question": "How much backend performance was improved overall?",
+    "answer": "By 30%."
+  },
+  {
+    "question": "Did you mentor junior developers?",
+    "answer": "Yes, I mentored 3 juniors and guided 2 full-stack developers."
+  },
+  {
+    "question": "How much was mobile performance improved?",
+    "answer": "By 70% using server-side processing."
+  },
+  {
+    "question": "What database migration experience do you have?",
+    "answer": "Migrating MySQL to PostgreSQL with full backward compatibility."
+  },
+  {
+    "question": "What frontend migrations have you done?",
+    "answer": "Migrated Blade+jQuery to Vue 3+Inertia.js, reducing bundle size by 68%."
+  },
+  {
+    "question": "What backend migration did you contribute to?",
+    "answer": "Migrated from PHP APIs to Node.js."
+  },
+  {
+    "question": "What deployment responsibilities did you handle?",
+    "answer": "Branching, merging, conflict resolution, and clean releases."
+  },
+
+  {
+    "question": "What degree do you hold?",
+    "answer": "Bachelor of Computer Science."
+  },
+  {
+    "question": "Where did you complete your bachelor's degree?",
+    "answer": "Coimbatore Institute of Technology."
+  },
+  {
+    "question": "What diploma do you hold?",
+    "answer": "Diploma in Computer Science."
+  },
+  {
+    "question": "Where did you complete your diploma?",
+    "answer": "Kavery Engineering College."
+  },
+
+  {
+    "question": "What are your core backend skills?",
+    "answer": "Performance engineering, queues, caching, SQL optimization."
+  },
+  {
+    "question": "Do you have Linux experience?",
+    "answer": "Yes, including shell scripting and server management."
+  },
+  {
+    "question": "What queue technologies do you use?",
+    "answer": "RabbitMQ and Redis queues."
+  },
+  {
+    "question": "What frontend frameworks do you use?",
+    "answer": "React, Vue 3, Inertia.js."
+  },
+  {
+    "question": "What reporting tools do you use?",
+    "answer": "Optimized Excel and PDF generation pipelines."
+  },
+  {
+    "question": "What is your debugging approach?",
+    "answer": "Query logs, profiling, isolating bottlenecks, and optimizing."
+  },
+  {
+    "question": "How do you ensure code quality?",
+    "answer": "Reviews, standards, modular design, and reusable components."
+  },
+  {
+    "question": "What deployment strategy do you follow?",
+    "answer": "Clean releases with proper Git branching and merging."
+  },
+
+  {
+    "question": "How do you handle deadline pressure?",
+    "answer": "By restructuring sprints and improving predictability."
+  },
+  {
+    "question": "How do you mentor juniors?",
+    "answer": "Through structured guidance, code reviews, and skill development."
+  },
+  {
+    "question": "How do you manage legacy systems?",
+    "answer": "Through progressive refactoring and backward compatibility."
+  },
+  {
+    "question": "What is your debugging strategy?",
+    "answer": "Log analysis, SQL profiling, and bottleneck isolation."
+  },
+  {
+    "question": "How do you handle conflicting requirements?",
+    "answer": "Through stakeholder discussions and priority alignment."
+  },
+  {
+    "question": "What motivates you as an engineer?",
+    "answer": "Solving complex performance and scalability challenges."
+  },
+  {
+    "question": "What is your leadership style?",
+    "answer": "Empowering the team, removing blockers, ensuring clean architecture."
+  },
+    {
+    "question": "What type of architectures have you worked with?",
+    "answer": "I have worked with modular monoliths, microservices, distributed queues, and cloud-ready containerized systems."
+  },
+  {
+    "question": "What is your approach to optimizing SQL queries?",
+    "answer": "I analyze slow queries, add indexes, use proper joins, avoid N+1 issues, and use caching when needed."
+  },
+  {
+    "question": "How do you handle high-traffic APIs?",
+    "answer": "I use caching layers, queue-heavy operations, indexing, load balancing, and optimized SQL queries."
+  },
+  {
+    "question": "What caching strategies do you typically use?",
+    "answer": "Redis caching, database query caching, pre-computed aggregates, and in-memory stores."
+  },
+  {
+    "question": "How do you handle concurrent write operations?",
+    "answer": "By using database transactions, row-level locking, and safe queue-based write operations."
+  },
+  {
+    "question": "What is your experience with message brokers?",
+    "answer": "I have used RabbitMQ extensively for async job processing and distributed workloads."
+  },
+  {
+    "question": "How do you handle job retries in queues?",
+    "answer": "With retry logic, exponential backoff, dead-letter queues, and error logging."
+  },
+  {
+    "question": "What are the benefits of using RabbitMQ?",
+    "answer": "High throughput, reliability, message persistence, routing flexibility, and distributed scalability."
+  },
+  {
+    "question": "How do you ensure system reliability?",
+    "answer": "By adding redundancy, monitoring queues, graceful error handling, and health checks."
+  },
+  {
+    "question": "What frontend performance techniques do you use?",
+    "answer": "Code splitting, lazy loading, memoized components, and API response optimization."
+  },
+  {
+    "question": "What is your approach to handling large datasets in React?",
+    "answer": "Using pagination, virtualization, server-side filters, and optimized API endpoints."
+  },
+  {
+    "question": "How do you secure APIs?",
+    "answer": "Input sanitization, authentication layers, rate limiting, and encrypted communication."
+  },
+  {
+    "question": "How do you approach designing a new software module?",
+    "answer": "Start with requirements, define architecture, plan data structures, and create scalable workflows."
+  },
+  {
+    "question": "What tools do you use for debugging performance issues?",
+    "answer": "Laravel Telescope, SQL logs, browser network tools, queue monitors, and profiling tools."
+  },
+  {
+    "question": "How do you manage large-scale codebases?",
+    "answer": "Modular structure, reusable components, coding standards, and automated testing."
+  },
+  {
+    "question": "What version control workflows do you prefer?",
+    "answer": "Git flow with feature branches, pull requests, and clean merge histories."
+  },
+  {
+    "question": "How do you reduce production downtime?",
+    "answer": "By using zero-downtime deployments and safe migration strategies."
+  },
+  {
+    "question": "What is your strategy for migrating legacy systems?",
+    "answer": "Migrate module-by-module, maintain backward compatibility, and ensure no downtime."
+  },
+  {
+    "question": "What is your experience with API authentication?",
+    "answer": "I use token-based auth, OAuth, and secure middleware pipelines."
+  },
+  {
+    "question": "What is your approach to code reviews?",
+    "answer": "I check for readability, performance, scalability, and security."
+  },
+  {
+    "question": "How do you optimize Laravel applications?",
+    "answer": "Caching, queueing, optimized queries, config caching, and route caching."
+  },
+  {
+    "question": "What tools do you use for deployment?",
+    "answer": "Git, CI/CD pipelines, SSH deployments, and container-based deployments."
+  },
+  {
+    "question": "How do you handle environment-specific configuration?",
+    "answer": "Using .env variables and separate configs for staging, production, and development."
+  },
+  {
+    "question": "What is your approach to error handling?",
+    "answer": "Centralized exception handling with logging and user-friendly error responses."
+  },
+  {
+    "question": "How do you ensure maintainable code?",
+    "answer": "Clean architecture, DRY principles, and modular reusable components."
+  },
+  {
+    "question": "What is your experience with REST API design?",
+    "answer": "I design clean, versioned, scalable REST APIs with consistent responses and documentation."
+  },
+  {
+    "question": "How do you handle data migrations safely?",
+    "answer": "Using transaction-safe migrations, backups, and staged rollouts."
+  },
+  {
+    "question": "What strategies do you use for UI/UX improvement?",
+    "answer": "Consistent components, fast interactions, responsive layouts, and user feedback cycles."
+  },
+  {
+    "question": "What is server-side rendering and when do you use it?",
+    "answer": "Rendering on server for SEO and faster initial loads; used when performance demands."
+  },
+  {
+    "question": "How do you manage API versioning?",
+    "answer": "Separate controllers, namespaces, and backward compatibility."
+  },
+  {
+    "question": "What is your experience with MySQL optimization?",
+    "answer": "Indexing, query restructuring, partitioning, and caching."
+  },
+  {
+    "question": "How do you ensure data integrity?",
+    "answer": "Using constraints, transactions, validations, and atomic operations."
+  },
+  {
+    "question": "What is your approach to bug fixing?",
+    "answer": "Reproduce the issue, isolate root cause, patch safely, and retest."
+  },
+  {
+    "question": "How do you handle WebSocket scalability?",
+    "answer": "Using socket servers, channels, load balancers, and event broadcasting."
+  },
+  {
+    "question": "Have you worked with CI/CD pipelines?",
+    "answer": "Yes, I use pipelines for automated testing and deployment."
+  },
+  {
+    "question": "How do you deal with technical debt?",
+    "answer": "Refactor progressively while maintaining feature delivery."
+  },
+  {
+    "question": "What makes a good API response design?",
+    "answer": "Consistency, meaningful errors, structured data, and performance."
+  },
+  {
+    "question": "How do you ensure frontend security?",
+    "answer": "By preventing XSS, sanitizing inputs, and using CSP policies."
+  },
+  {
+    "question": "What is your approach to validating user input?",
+    "answer": "Server-side validation, sanitization, and proper error messaging."
+  },
+  {
+    "question": "How do you scale a Laravel application?",
+    "answer": "Horizontal scaling, caching, queueing, optimized DB, and load balancers."
+  },
+  {
+    "question": "What is your experience with logging?",
+    "answer": "Structured logs, error logs, queue logs, and monitoring dashboards."
+  },
+  {
+    "question": "How do you build fault-tolerant modules?",
+    "answer": "Retries, fallback messages, queues, and proper error-handling flows."
+  },
+  {
+    "question": "What frontend libraries do you frequently use?",
+    "answer": "React, Vue 3, Axios, TailwindCSS, and component libraries."
+  },
+  {
+    "question": "How do you manage memory-heavy operations?",
+    "answer": "Chunked processing, queues, batch requests, and optimized queries."
+  },
+  {
+    "question": "What are your best practices for writing APIs?",
+    "answer": "Use proper HTTP methods, validation, versioning, and clean error responses."
+  },
+  {
+    "question": "How do you approach team communication?",
+    "answer": "Clear updates, documentation, and collaborative problem-solving."
+  },
+  {
+    "question": "What motivates you to work on backend performance?",
+    "answer": "I enjoy solving bottlenecks and making systems faster and more scalable."
+  },
+  {
+    "question": "How do you stay updated with new technologies?",
+    "answer": "By reading documentation, exploring tools, and practicing new techniques regularly."
+  },
+  {
+    "question": "What is your philosophy when designing backend systems?",
+    "answer": "Make them scalable, maintainable, predictable, and easy to extend."
+  },
+  {
+    "question": "What is your overall engineering mindset?",
+    "answer": "Build clean, scalable, and efficient solutions that deliver long-term value."
+  },
+  {
+    "question": "Name",
+    "answer": "Satheesh Kumar."
+  },
+  {
+    "question": "hi",
+    "answer": "Hello! How can I assist you today?"
+  },
+  {
+    "question": "hello",
+    "answer": "Hi there! What can I help you with?"
+  },
+  {
+    "question": "hey",
+    "answer": "Hey! How’s your day going?"
+  },
+  {
+    "question": "good morning",
+    "answer": "Good morning! Hope you have a great day!"
+  },
+  {
+    "question": "good afternoon",
+    "answer": "Good afternoon! How can I support you?"
+  },
+  {
+    "question": "good evening",
+    "answer": "Good evening! How may I help you?"
+  },
+  {
+    "question": "how are you",
+    "answer": "I'm doing great! Thanks for asking. How are you?"
+  },
+  {
+    "question": "who are you",
+    "answer": "I'm your assistant chatbot, here to answer your questions."
+  },
+  {
+    "question": "what is your name",
+    "answer": "You can call me ChatBot. I'm here to help!"
+  },
+  {
+    "question": "what can you do",
+    "answer": "I can answer your questions, help with information, and assist you based on your resume data."
+  },
+  {
+    "question": "thank you",
+    "answer": "You're welcome! Happy to help!"
+  },
+  {
+    "question": "thanks",
+    "answer": "Anytime! Let me know if you need anything else."
+  },
+  {
+    "question": "how was your day",
+    "answer": "My day is going great! I hope yours is too."
+  },
+  {
+    "question": "are you a robot",
+    "answer": "Yes, I am a chatbot created to help you with your queries."
+  },
+  {
+    "question": "what are you doing",
+    "answer": "Just waiting to assist you! Ask me anything."
+  },
+  {
+    "question": "where are you from",
+    "answer": "I live in the digital world! Ready to help from anywhere."
+  },
+  {
+    "question": "are you alive",
+    "answer": "Not really—I'm just a smart program here to help you!"
+  },
+  {
+    "question": "do you know me",
+    "answer": "I only know what you tell me. But I'm here to learn and help!"
+  },
+  {
+    "question": "do you like me",
+    "answer": "Of course! I'm here to support you anytime."
+  },
+  {
+    "question": "okay",
+    "answer": "Great! Let me know what you need."
+  },
+  {
+    "question": "bye",
+    "answer": "Goodbye! Have a nice day!"
+  },
+  {
+    "question": "see you",
+    "answer": "See you soon! Take care."
+  },
+  {
+    "question": "are you there",
+    "answer": "Yes, I'm here. How can I help?"
+  },
+  {
+    "question": "can you help me",
+    "answer": "Absolutely! Tell me what you need help with."
+  },
+  {
+    "question": "what is going on",
+    "answer": "Nothing much—just ready to answer your questions!"
+  },
+  {
+    "question": "tell me something",
+    "answer": "Sure! Did you know? Chatbots can simplify your daily tasks!"
+  },
+  {
+    "question": "i am bored",
+    "answer": "Let’s chat! Ask me anything you’re curious about."
+  },
+  {
+    "question": "how old are you",
+    "answer": "Age doesn't apply to me, but I'm always updated!"
+  },
+  {
+    "question": "do you speak tamil",
+    "answer": "ஆம்! நான் தமிழ் பேச முடியும். எப்படி உதவலாம்?"
+  },
+  {
+    "question": "do you speak hindi",
+    "answer": "हाँ, मैं हिंदी भी बोल सकता हूँ। कैसे मदद करूँ?"
+  },
+  {
+    "question": "are you human",
+    "answer": "No, I'm a chatbot—but I try my best to understand you!"
+  },
+  {
+    "question": "where do you live",
+    "answer": "I live inside the server, always awake to help!"
+  },
+  {
+    "question": "are you intelligent",
+    "answer": "I try to be! Ask me something and see for yourself."
+  },
+  {
+    "question": "do you have friends",
+    "answer": "All users who talk to me are my friends!"
+  },
+  {
+    "question": "can you learn",
+    "answer": "Yes! Every question helps me understand better."
+  },
+  {
+    "question": "tell me a joke",
+    "answer": "Why don’t robots get tired? Because they recharge by chatting!"
+  }
+]
